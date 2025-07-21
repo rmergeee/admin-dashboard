@@ -1,1 +1,27 @@
 @import url(reset.css);
+
+:root {
+    --blue: #1992d4;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+/* nav, header, .content {
+    border: 1px solid red;
+} */
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 4fr / 1fr 5fr;
+
+    >.nav-panel {
+        grid-row: span 2;
+    }
+}
+
+.nav-panel {
+    background-color: var(--blue);
+    color: white;
+}
