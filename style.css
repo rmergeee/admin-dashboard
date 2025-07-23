@@ -9,6 +9,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    background-color: var(--content-bg);
 }
 
 /* nav, header, .content {
@@ -69,13 +70,15 @@ body {
     }
 }
 
-.content {
+/* .content {
     background-color: var(--content-bg)
-}
+} */
 
 header {
     display: grid;
     grid-template-columns: 1fr 2fr / 1fr;
+    background-color: white;
+    box-shadow: 2px 2px 7px 1px rgba(164, 164, 164, 0.99);
 
     .first-header-row {
         margin: 1rem 3rem;
@@ -166,6 +169,76 @@ header {
                 border-radius: 30px;
                 padding: 0.75rem 2rem;
                 font-weight: bold;
+            }
+        }
+    }
+}
+
+.content {
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+
+    h2 {
+        font-weight: 500;
+    }
+
+    .your-projects {
+        grid-row: span 2;
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+
+            .project-card {
+                margin-top: 1rem;
+                background-color: white;
+                border-left: 1rem solid #f0b429;
+                border-radius: 15px;
+                padding: 3rem 2rem 2rem 3rem;
+                color: gray;
+
+                h3 {
+                    color: black;
+                }
+
+                .card-control {
+                    margin-top: 3rem;
+                    display: flex;
+                    justify-content: right;
+                    gap: 1rem;
+
+                    img {
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .announcements>section {
+        background-color: white;
+        border-radius: 15px;
+        padding: 2.5rem 2rem;
+
+        hr {
+
+            border-top: 1px solid lightgray;
+        }
+
+        article {
+            margin: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: gray;
+
+            h3 {
+                color: black;
             }
         }
     }
