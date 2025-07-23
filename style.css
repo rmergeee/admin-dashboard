@@ -76,97 +76,97 @@ body {
 header {
     display: grid;
     grid-template-columns: 1fr 2fr / 1fr;
-}
 
-.first-header-row {
-    margin: 1rem 3rem;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    column-gap: 12rem;
+    .first-header-row {
+        margin: 1rem 3rem;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        column-gap: 12rem;
 
-    .searcher {
-        display: flex;
-        gap: 1.5rem;
-        align-items: center;
+        .searcher {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
 
-        img[src="img/search.svg"] {
-            height: 2rem;
+            img[src="img/search.svg"] {
+                height: 2rem;
+            }
+
+            input[type="search"] {
+                box-sizing: border-box;
+                background-color: var(--content-bg);
+                border: none;
+                border-radius: 20px;
+                height: 2rem;
+                flex: 1;
+                padding: 2px;
+                padding-left: 1rem;
+            }
+
+            input[type="search"]:focus-visible {
+                outline: none;
+                border: 1px solid rgb(187, 187, 187);
+                box-shadow: 0 0 5px rgba(146, 146, 146, 0.5);
+            }
         }
 
-        input[type="search"] {
-            box-sizing: border-box;
-            background-color: var(--content-bg);
-            border: none;
-            border-radius: 20px;
-            height: 2rem;
-            flex: 1;
-            padding: 2px;
-            padding-left: 1rem;
-        }
-
-        input[type="search"]:focus-visible {
-            outline: none;
-            border: 1px solid rgb(187, 187, 187);
-            box-shadow: 0 0 5px rgba(146, 146, 146, 0.5);
-        }
-    }
-
-    .notification {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        font-weight: bold;
-        font-size: 1rem;
-
-        .avatar {
-            height: 3rem;
-            width: 3rem;
-            background-color: var(--content-bg);
-            border-radius: 100%;
-        }
-
-        img[src="img/bell-ring.svg"] {
-            height: 2rem;
-        }
-
-    }
-}
-
-.second-header-row {
-    margin: 1rem 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .greeting {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-weight: bold;
-
-        p+p {
-            font-size: 1.5rem;
-        }
-
-        .avatar {
-            width: 5rem;
-            height: 5rem;
-            background-color: var(--content-bg);
-            border-radius: 100%;
-        }
-    }
-
-    .control-buttons {
-        display: flex;
-        gap: 1rem;
-        
-        button {
-            background-color: var(--blue);
-            color: white;
-            border: none;
-            border-radius: 30px;
-            padding: 0.75rem 2rem ;
+        .notification {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
             font-weight: bold;
+            font-size: 1rem;
+
+            .avatar {
+                height: 3rem;
+                width: 3rem;
+                background-color: var(--content-bg);
+                border-radius: 100%;
+            }
+
+            img[src="img/bell-ring.svg"] {
+                height: 2rem;
+            }
+
+        }
+    }
+
+    .second-header-row {
+        margin: 1rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .greeting {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: bold;
+
+            p+p {
+                font-size: 1.5rem;
+            }
+
+            .avatar {
+                width: 5rem;
+                height: 5rem;
+                background-color: var(--content-bg);
+                border-radius: 100%;
+            }
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 1rem;
+
+            button {
+                background-color: var(--blue);
+                color: white;
+                border: none;
+                border-radius: 30px;
+                padding: 0.75rem 2rem;
+                font-weight: bold;
+            }
         }
     }
 }
