@@ -176,7 +176,7 @@ header {
 
 .content {
     display: grid;
-    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template: 1fr / 3fr 1fr;
     padding: 2rem;
     gap: 2rem;
 
@@ -191,9 +191,9 @@ header {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2rem;
+            margin-top: 1rem;
 
             .project-card {
-                margin-top: 1rem;
                 background-color: white;
                 border-left: 1rem solid #f0b429;
                 border-radius: 15px;
@@ -222,6 +222,7 @@ header {
         background-color: white;
         border-radius: 15px;
         padding: 2.5rem 2rem;
+        margin-top: 1rem;
 
         hr {
 
@@ -242,4 +243,42 @@ header {
             }
         }
     }
+
+    .trending {
+
+        section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem 2rem;
+            display: grid;
+            gap: 2rem;
+            
+            article {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .username {
+                    font-weight: bold;
+                }
+
+                .about-user {
+                    color: gray;
+                }
+
+                .avatar {
+                    height: 4rem;
+                    width: 4rem;
+                    border-radius: 100%;
+                    background: var(--content-bg);
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
