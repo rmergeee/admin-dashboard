@@ -5,7 +5,6 @@
     --blue: #1992d4;
     --content-bg: #e2e8f0;
     --orange: #f0b429;
-    --search-bg: #e2e8f0;
 }
 
 body {
@@ -67,5 +66,68 @@ body {
         >h1 {
             padding-left: 0.6rem;
         }
+    }
+}
+
+.content {
+    background-color: var(--content-bg)
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr / 1fr;
+}
+
+.first-header-row {
+    margin: 1rem 3rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    column-gap: 12rem;
+
+    .searcher {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+
+        img[src="img/search.svg"] {
+            height: 2rem;
+        }
+
+        input[type="search"] {
+            box-sizing: border-box;
+            background-color: var(--content-bg);
+            border: none;
+            border-radius: 20px;
+            height: 2rem;
+            flex: 1;
+            padding: 2px;
+            padding-left: 1rem;
+        }
+
+        input[type="search"]:focus-visible  {
+            outline: none;
+            border:1px solid rgb(187, 187, 187);
+            box-shadow: 0 0 5px rgba(146, 146, 146, 0.5);
+        }
+    }
+
+    .notification {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-weight: bold;
+        font-size: 1rem;
+
+        .avatar {
+            height: 3rem;
+            width: 3rem;
+            background-color: var(--content-bg);
+            border-radius: 100%;
+        }
+
+        img[src="img/bell-ring.svg"] {
+            height: 2rem;
+        }
+
     }
 }
